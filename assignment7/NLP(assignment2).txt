@@ -1,0 +1,95 @@
+#Objective Question:
+1. The value of corelation is -1 to 1.
+
+2. There are generally 7 techniques to perfrom dimensionality reduction:
+   a.Missing Values Ratio.
+   b.Low Variance Filter.
+   c.High Correlation Filter.
+   d.Random Forests/Ensemble Trees.
+   e.Principal Component Analysis (PCA).
+   f.Backward Feature Elimination.
+   g.Forward Feature Construction.
+   But we can also use lasso Regularisation Using cross-validation to select the optimal value of lambda.
+   Thus Ridge is not used for dimensionality reduction.
+
+3.SVM uses Linear,Plynomial and radial basic function but does not use Hyperplane Kernel.
+
+4.Logistic Regression is best suited for non linear boundries.
+
+5.Since X is independent varaible thus value will be 2.205*old coefficient of x.
+
+6.when number of estimator increases the value of accuracy will not increase in adaboost classifier.
+
+7.Random forest are not as easy to interpret as DTC.
+
+8.PCA can be used for both supervised and Unsupervised and are Linear combination of Linear combination of Linear Variable.
+
+9.Clustering are used for:
+  a. Identifying spam or ham emails.
+  b. Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty
+     index, employment rate, population and living index.
+  c. Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar level.
+
+10.Hyper parameters of a decision tree are:
+     a.max_depth b. max_features c.min_samples_leaf.
+
+### Thus according to options the solution are:
+1.C  
+2.D
+3.C
+4.A
+5.A
+6.D
+7.C
+8.D
+9.A,C,D
+10. A,B,D
+
+##Subjective Question:
+
+11.Outliers: these are the values which are significantly differnt from other values. These are due to experimental error or sometimes by human too.
+IQR is a range where most of the value of data lies.IQR is the difference between third quartile and 1st quartile.Q3 is the middle value of between median value and the highest value.Q1 is the middle value between the lowest value and median value.
+According to this rule any value which doesnot lies in the range of Q1-1.5*iqr AND Q3+1.5*iqr is considered as outliers.
+
+12.Ensemble methods is a machine learning technique that combines several base models in order to produce one optimal predictive model.Bagging and bossting both are ensemble tecniques.
+Bagging is a parallel method while boosting is a sequential method.
+Bagging is a method to reduce the variation of the results thus reducing over-fitting. It is based on
+bootstrapping where we build various base models using bagging (taking random subsets of
+observations with replacement) and then take majority vote of all the base algorithms to create a
+strong model out of various weak models.
+Boosting is based on giving more weightage to the misclassified observations in each next
+sequential model so as to give more emphasis to correctly classify the points which are hard to
+classify.
+
+13.The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model. The adjusted R-squared increases only if the new term improves the model more than would be expected by chance. It decreases when a predictor improves the model by less than expected by chance.
+
+The main differnces between R-squared and Adjusted R-squared are :
+R-squared measures the proportion of the variation in your dependent variable (Y) explained by your independent variables (X) for a linear regression model. Adjusted R-squared adjusts the statistic based on the number of independent variables in the model.
+
+The mathematical formula for adjusted R-squared is as follows:
+Adj R-squared= 1-{(n-1)/(n-k-1)*(RSS/TSS)}
+where n is total number of observations,
+k is the number of features,
+RSS is squared sum of differences between actual observed values and predicted values and
+TSS is the squared sum of differences between actual observed values and mean of all the values.
+
+14.Standardisation and Normalisation are techniques of data processing used to scale down the data
+to a same range.
+Normalization usually means to scale a variable to have a values between 0 and 1, while standardization transforms data to have a mean of zero and a standard deviation of 1.
+
+15. Cross-validation is a technique of evaluating the algorithm by training it on multiple subsets of
+data thus leveraging the power of amount of data to result in better predicting models. We basically
+split the data into train, validation and test sets so that algorithm can be trained, validated and then
+tested on entirely unseen data.
+In K-fold cross validation, we create equal folds of our train data and use (k-1) folds as our training
+data and 1 fold as the validation data in each of the k-iterations.
+Advantages of Cross-validation:
+Reduces over-fitting
+Validates the performance of model by training it on several folds of data
+Balances the classes in our data in case we are working with Imbalanced data set
+Disadvantages of Cross-validation:
+Training time increases by a factor of K as now we’ll have to train the model K times using
+different subsets of data
+Computational expense increases.
+
+
