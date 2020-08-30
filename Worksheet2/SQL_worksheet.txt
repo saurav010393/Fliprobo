@@ -1,0 +1,26 @@
+1.A,D
+2.A,B,C
+3.B
+4.B
+5.A
+6.C
+7.B
+8.B
+9.D
+10.C
+
+11.
+A data warehouse essentially combines information from several sources into one comprehensive database. For example, in the business world, a data warehouse might incorporate customer information from a company's point-of-sale systems (the cash registers), its website, its mailing lists and its comment cards.
+
+12.OLTP stands for On-Line Transactional processing. It is used for maintaining the online transaction and record integrity in multiple   access environments.Eg:Data Warehousing.
+  OLTP is a system that manages very large number of short online transactions for example ATM.
+
+13.There are maily four data warehouse characteristics:
+Subject-oriented – A data warehouse is always a subject oriented as it delivers information about a theme instead of organization's current operations
+Integrated: The way data is extracted and transformed is uniform, regardless of the original source.
+Time-variant: Data is organized via time-periods (weekly, monthly, annually, etc.).
+Non-volatile: A data warehouse is not updated in real-time.
+
+14.The star schema is an important special case of the snowflake schema, and is more effective for handling simpler queries. The star schema gets its name from the physical model's resemblance to a star shape with a fact table at its center and the dimension tables surrounding it representing the star's points.
+
+15.SETL is a high level programming used for math matical equation and problem solving.

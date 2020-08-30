@@ -1,0 +1,18 @@
+1.B
+2.A
+3.B
+4.A
+5.A
+6.D
+7.A
+8.A
+9.B,D
+10.A,C,D
+
+11.List:List is a kind of array.List is mutable and can be extended or reduced.
+   Tuple: Tuple is also a array but like a string it is immutable.
+   Set:Sets are mutable unordered sequence of unique elements.No duplicate data is allowed.
+   Dictionary: Pair of key and values.This is enclosed by curly braces.
+
+13.The ord() function in Python accepts a string of length 1 as an argument and returns the unicode code point representation of the passed    argument. For example ord('B') returns 66 which is a unicode code point value of character 'B'.
+   The ord() function returns the number representing the unicode code of a specified character.
