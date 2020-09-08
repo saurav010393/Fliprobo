@@ -1,0 +1,76 @@
+1.
+create table customers (
+customerNumber int, 
+customerName varchar(50),
+contactFirstName varchar(30),
+contactLastName varchar(30),
+phone int,
+addressLine1 varchar(200),
+addressLine2 varchar(200),
+city varchar(20),
+state varchar(20),
+postalCode int,
+country varchar(20),
+salesRepEmployeeNumber int,
+ceditLimit int,
+PRIMARY KEY(customerNumber),
+FOREIGN KEY(salesRepEmployeeNumber) references employees(employeeNumber));
+
+2.
+create table orders(
+orderNumber int,
+orderDate DATE,
+requiredDate DATE,
+shippedDate DATE,
+status varchar(20),
+comments varchar(500),
+customerNumber int,
+PRIMARY KEY (orderNumber),
+FOREIGN KEY (customerNumber) references customers(customerNumber));
+
+3.
+select * from Orders;
+if the question is about getting all the data from all the columns 
+describe Orders;
+if the question is about the schema data of all the columns
+
+4.
+select comments from Orders;
+
+5.
+select count(orderNumber) as count, orderDate from Orders group by orderDate;
+
+6.
+select employeeNumber, lastName, firstName from employees;
+
+7.
+select orders.orderNumber, customers.customerName from orders left join customers on orders.customerNumber=customers.customerNumber ;
+
+8.
+select customers.customerName, employees.firstName, employees.lastName from customers left join employees on customers.salesRepEmployeeNumber = employees.employeeNumber;
+
+9.
+select COUNT(amount), paymentDate from payments group by paymentDate;
+
+10.
+select productName, MSRP,  productDescription from products;
+
+11.
+select productName, productDescription from products where (select productCode from orderdetails order by quantityOrdered desc limit 1);
+
+12.
+select COUNT(orders.orderNumber) as count, customers.city from orders left join customers on orders.customerNumber = customers.customerNumber group by city order by count desc limit 1;
+
+13.
+select state, count(customerNumber) as count from Customers group by state order by count desc limit 1;
+
+select state from Customers group by state order by COUNT(customerNumber) desc limit 1;
+
+14.
+select employeeNumber, CONCAT(firstName, “ ”, lastName) as Name from employees;
+
+
+
+15.
+select o.orderNumber, c.customerName, (od.quantityOrdered * od.priceEach) as amount from orders as o left join customers as c on o.customerNumber=c.customerNumber left join orderdetails as od on od.orderNumber = o.orderNumber;
+
